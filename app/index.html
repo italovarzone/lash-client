@@ -33,6 +33,12 @@
     </div>
 
     <script>
+        // Redirecionar se os dados do cliente já estiverem no localStorage
+        const existingClientData = localStorage.getItem('clientData');
+        if (existingClientData) {
+            window.location.href = 'home/index.html';
+        }
+
         // Função para adicionar máscara ao input de telefone
         document.getElementById('phone').addEventListener('input', function(event) {
             let input = event.target;
